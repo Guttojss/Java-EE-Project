@@ -41,7 +41,7 @@ public class DukesBirthdayBean {
         int ageDifference;
 
         Calendar theirBirthday = new GregorianCalendar();
-        Calendar dukesBirthday = new GregorianCalendar(1995, Calendar.MAY, 23);
+        Calendar dukesBirthday = new GregorianCalendar(2000, Calendar.OCTOBER, 31);
 
         // Set the Calendar object to the passed-in Date
         theirBirthday.setTime(date);
