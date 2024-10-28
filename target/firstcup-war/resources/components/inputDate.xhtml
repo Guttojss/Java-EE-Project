@@ -23,7 +23,7 @@
     <!-- IMPLEMENTATION -->
     <cc:implementation>
         <h:inputText id="getdate" value="#{cc.attrs.date}">
-            <f:convertDateTime pattern="MM/dd/yyyy" />
+            <f:convertDateTime pattern="dd/MM/yyyy"/>
         </h:inputText>
         <p/>
         <h:message for="getdate" style="color:red" />
