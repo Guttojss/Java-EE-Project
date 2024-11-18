@@ -1,3 +1,4 @@
 firstcup\entity\FirstcupUser.class
 firstcup\web\DukesBDay.class
+firstcup\web\Login.class
 firstcup\ejb\DukesBirthdayBean.class

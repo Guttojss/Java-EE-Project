@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:fc="http://xmlns.jcp.org/jsf/composite/components">
+    <h:head>
+       <title>Login</title>
+       <link rel="stylesheet" href="style/styles.css"/>
+    </h:head>
+    <h:body>
+          <h:form>
+            <h2>
+                <h:outputText value="#{bundle.Login}"/>
+            </h2>
+            <h:outputText value="#{bundle.NewInstructions}"/>
+            <p/>
+             <h:inputText id="User" value="#{Login.yourName}"/>
+            <p/>
+            <h:commandButton value="#{bundle.Submit}" 
+                             action="#{Login.processUser}"/>
+        </h:form>
+    </h:body>
+</html>
+
