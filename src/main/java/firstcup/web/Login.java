@@ -73,13 +73,9 @@ public class Login implements Serializable {
     public void setYourName(String Name) {
         this.User = Name;
     }
-
-    /**
-       
+    
     /*
-    
     ---------------------------------------------------------------
-    
     */
     /**
      * Get the value of yourBD
