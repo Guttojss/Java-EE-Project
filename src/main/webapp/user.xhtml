@@ -7,10 +7,12 @@
         <link rel="stylesheet" href="style/styles.css"/>
     </h:head>
     <h:body>
-        <h:outputText value="#{bundle.Logged}"
-                          rendered="#{Login.user}"/>
         <h:form>
+        <h:outputText 
+                value="#{bundle.Logged} #{loginbean.name}."/>
+            <p/>
             <h:commandButton id="back" value="#{bundle.Back}" action="greeting"/>
         </h:form>
     </h:body>
 </html>
+
