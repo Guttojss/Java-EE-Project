@@ -7,7 +7,6 @@
  */
 package firstcup.web;
 
-import firstcup.ejb.DukesBirthdayBean;
 import firstcup.ejb.LoginBean;
 import java.io.Serializable;
 import java.util.logging.Level;
