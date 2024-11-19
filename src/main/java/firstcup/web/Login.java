@@ -5,13 +5,14 @@
  * compliance with  the terms of the License at:
  * https://github.com/javaee/firstcup-examples/LICENSE.txt
  */
+
 package firstcup.web;
 
-import firstcup.ejb.LoginBean;
+ //import firstcup.ejb.LoginBean;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.EJB;
+ //import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import javax.validation.constraints.NotNull;
@@ -24,8 +25,8 @@ import javax.ws.rs.client.WebTarget;
 @SessionScoped
 public class Login implements Serializable {
 
-    @EJB
-    private LoginBean LoginBean;
+   /* @EJB
+    private LoginBean LoginBean;*/
 
     @NotNull
     private String Name;
@@ -36,15 +37,16 @@ public class Login implements Serializable {
     public Login() {
     }
 
-    /**
+    /*
      * Process User and log the user name.
+     * @return 
      */
     public String processUser() {
-        logger.log(Level.INFO, "User: {0}", Name);
+         logger.log(Level.INFO, "Username {0}", Name);
         return "/user.xhtml";
     }
 
-    /**
+    /*
      * Get the value of User by calling the external service.
      *
      * @return the User name retrieved from the external service
@@ -57,13 +59,13 @@ public class Login implements Serializable {
             logger.log(Level.INFO, "Retrieved User: {0}", User);
         } 
         catch (IllegalArgumentException | NullPointerException | WebApplicationException ex) {
-            logger.severe("Processing of HTTP response failed: " + ex.getMessage());
+            logger.log(Level.SEVERE, "Processing of HTTP response failed: {0}", ex.getMessage());
             User = "Error retrieving user"; // Default value in case of failure
         }
         return Name;
     }
 
-    /**
+    /*
      * Get the current User value.
      *
      * @return the User
