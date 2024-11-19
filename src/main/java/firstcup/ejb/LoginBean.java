@@ -21,7 +21,7 @@ public class LoginBean implements Serializable {
     public String processUser() {
         // Simula o processamento do nome do usuário
         if (userName == null || userName.isEmpty()) {
-            userName = "Guest";  // Define "Guest" como nome padrão se não houver valor
+            userName = "Visitante";  // Define "Guest" como nome padrão se não houver valor
         }
         logger.log(Level.INFO, "User logged in: {0}", userName);
         return "/user.xhtml";  // Navega para a página user.xhtml
